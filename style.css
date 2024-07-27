@@ -52,8 +52,7 @@ a {
 	color: white !important;
 }
 
-.hovered-level-1-item,
-.nav-link:hover {
+.hovered-level-1-item {
 	box-sizing: content-box !important;
 	color: red !important;
 	background-color: white;

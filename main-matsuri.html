@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html style="height: 200%; >
+<html style="height: 200%">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,6 +17,26 @@
 		<title>Bootstrap Example</title>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
+			const handleNonExtentableMouseOver = (e) => {
+				const isTouchDevice =
+					"ontouchstart" in window ||
+					navigator.maxTouchPoints > 0 ||
+					navigator.msMaxTouchPoints > 0;
+				if (window.innerWidth >= 992 && !isTouchDevice) {
+					e.target.classList.add("hovered-level-1-item");
+				}
+			};
+
+			const handleNonExtentableMouseOut = (e) => {
+				const isTouchDevice =
+					"ontouchstart" in window ||
+					navigator.maxTouchPoints > 0 ||
+					navigator.msMaxTouchPoints > 0;
+				if (window.innerWidth >= 992 && !isTouchDevice) {
+					e.target.classList.remove("hovered-level-1-item");
+				}
+			};
+
 			const handleMouseOver = (e) => {
 				const isTouchDevice =
 					"ontouchstart" in window ||
@@ -64,7 +84,22 @@
 		</script>
 	</head>
 
-	<body style="height: 100%; background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);">
+	<body
+		style="
+			height: 100%;
+			background-image: linear-gradient(
+				to top,
+				#dbdcd7 0%,
+				#dddcd7 24%,
+				#e2c9cc 30%,
+				#e7627d 46%,
+				#b8235a 59%,
+				#801357 71%,
+				#3d1635 84%,
+				#1c1a27 100%
+			);
+		"
+	>
 		<header class="sticky-top">
 			<nav class="navbar ps-5 pt-1 pb-4 ps-lg-1 pb-lg-1">
 				<div class="switch">
@@ -101,7 +136,12 @@
 					>
 						<ul class="navbar-nav align-items-lg-center">
 							<li class="nav-item menu-level-1">
-								<a class="nav-link active pt-lg-4 pb-lg-4" aria-current="page" href="#"
+								<a
+									class="nav-link active pt-lg-4 pb-lg-4"
+									aria-current="page"
+									href="#"
+									onmouseenter="handleNonExtentableMouseOver(event)"
+									onmouseleave="handleNonExtentableMouseOut(event)"
 									>Tickets</a
 								>
 							</li>
@@ -392,7 +432,12 @@
 								</div>
 							</li>
 							<li class="nav-item menu-level-1">
-								<a class="nav-link active pt-lg-4 pb-lg-4" aria-current="page" href="#"
+								<a
+									class="nav-link active pt-lg-4 pb-lg-4"
+									aria-current="page"
+									href="#"
+									onmouseenter="handleNonExtentableMouseOver(event)"
+									onmouseleave="handleNonExtentableMouseOut(event)"
 									>Artist Alley</a
 								>
 							</li>
@@ -475,7 +520,14 @@
 								</div>
 							</li>
 							<li class="nav-item menu-level-1">
-								<a class="nav-link active pt-lg-4 pb-lg-4" aria-current="page" href="#">Shop</a>
+								<a
+									class="nav-link active pt-lg-4 pb-lg-4"
+									aria-current="page"
+									href="#"
+									onmouseenter="handleNonExtentableMouseOver(event)"
+									onmouseleave="handleNonExtentableMouseOut(event)"
+									>Shop</a
+								>
 							</li>
 						</ul>
 					</div>
