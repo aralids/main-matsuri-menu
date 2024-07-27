@@ -48,10 +48,19 @@ a {
 	color: inherit;
 }
 
-.hovered-level-1-item {
+.nav-link {
+	color: white !important;
+}
+
+.hovered-level-1-item,
+.nav-link:hover {
 	box-sizing: content-box !important;
 	color: red !important;
 	background-color: white;
 	outline: 1px solid lightgrey;
 	border-radius: 5px;
+}
+
+.navbar {
+	background-color: rgb(168, 168, 168, 0.75);
 }
