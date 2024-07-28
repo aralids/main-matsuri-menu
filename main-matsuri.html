@@ -52,6 +52,13 @@
 					div.classList.remove("show");
 				}
 			};
+
+			const handleHamburgerClick = (e) => {
+				document
+					.getElementById("main-navbar")
+					.classList.toggle("navbar-opaque");
+				document.getElementById("sec-navbar").classList.toggle("navbar-opaque");
+			};
 		</script>
 	</head>
 
@@ -72,7 +79,7 @@
 		"
 	>
 		<header class="sticky-top">
-			<nav class="navbar ps-5 pt-1 pb-4 ps-lg-1 pb-lg-1">
+			<nav id="sec-navbar" class="navbar ps-5 pt-1 pb-4 ps-lg-1 pb-lg-1">
 				<div class="switch">
 					<input
 						id="language-toggle"
@@ -84,7 +91,7 @@
 					<span class="off">EN</span>
 				</div>
 			</nav>
-			<nav id="main-navbar" class="navbar navbar-expand-lg p-0 m-0">
+			<nav id="main-navbar" class="navbar navbar-expand-lg p-0 pb-5 p-lg-0 m-0">
 				<div
 					class="container-fluid d-flex ps-5 pe-5 ps-lg-0 pe-lg-0"
 					id="main-navbar-div"
@@ -98,6 +105,7 @@
 						aria-controls="navbarSupportedContent"
 						aria-expanded="false"
 						aria-label="Toggle navigation"
+						onclick="handleHamburgerClick()"
 					>
 						<span class="navbar-toggler-icon"></span>
 					</button>
@@ -106,7 +114,7 @@
 						id="navbarSupportedContent"
 					>
 						<ul class="navbar-nav align-items-lg-center">
-							<li class="nav-item menu-level-1">
+							<li class="nav-item menu-level-1-item">
 								<a
 									class="nav-link active pt-lg-4 pb-lg-4 d-none d-lg-block"
 									aria-current="page"
@@ -121,7 +129,7 @@
 								>
 							</li>
 							<li
-								class="nav-item dropdown menu-level-1"
+								class="nav-item dropdown menu-level-1-item"
 								style="position: initial"
 							>
 								<a
@@ -166,47 +174,49 @@
 										<div
 											class="col-sm-6 col-lg-3 order-2 order-sm-3 order-lg-2"
 										>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Cup Noodles Main Stage</a
 											>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Brother Sewing & Craft Main Stage</a
 											>
-											<a class="dropdown-item menu-level-2" href="#">Contest</a>
+											<a class="dropdown-item menu-level-2-item" href="#"
+												>Contest</a
+											>
 											<ul>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#"
 														>Main Weg nach Osten – Cosplay Wettbewerb Finale</a
 													>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Cosplay Contest - Samstag</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Cosplay Walking Contest</a>
 												</li>
 											</ul>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Workshops</a
 											>
 
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Künstler</a
 											>
 											<ul>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Yuko Suzuhana</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Taichi Hikida</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Mana Yoshinaga</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Takeo Ischi</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Kokubu</a>
 												</li>
 											</ul>
@@ -215,86 +225,86 @@
 											class="col-sm-6 col-lg-3 order-3 order-sm-2 order-lg-3"
 										>
 											<ul>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Maiko Narimoto</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">RAZARIS DANCE&VOCALS</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Masaki Nakamura</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Yoshiaki Okawa</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Kazuya Usui</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Hiroyuki Miyazono</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Kouki Kanou</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Kashichiro Hanayagi</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Senyumeji Nishikawa</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Shuji Yamagiri</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Daisuke Niinuma</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">ex-ON/OFF (SAKAMOTO Brothers)</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Satoshi "Sammy" Saito</a>
 												</li>
 											</ul>
 										</div>
 										<div class="col-sm-6 col-lg-3 order-4">
 											<ul>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Hiroshi Furukawa</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Tatto Otta</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Yusuke Yamasaki</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Rena Kato</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Juan Pablo</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Juan De Ildefonso Garcia</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Gunbu</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">RAZARIS Girls</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Satoshi</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Hikari Yammy</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Cuba Japón</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Nichi-Doku Bon-Odori Kai e.V.</a>
 												</li>
-												<li class="menu-level-3">
+												<li class="menu-level-3-item">
 													<a href="#">Nichibu Fusion Duo</a>
 												</li>
 											</ul>
@@ -303,7 +313,7 @@
 								</div>
 							</li>
 							<li
-								class="nav-item dropdown menu-level-1"
+								class="nav-item dropdown menu-level-1-item"
 								style="position: initial"
 							>
 								<a
@@ -338,35 +348,35 @@
 										<div
 											class="col-sm-6 col-lg-3 order-1 d-flex flex-column justify-content-center"
 										>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Öffnungszeiten</a
 											>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Das Festivalgelände</a
 											>
 										</div>
 										<div
 											class="col-sm-6 col-lg-3 order-2 order-sm-3 order-lg-2"
 										>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Übernachtung</a
 											>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Anfahrt & Parkplätze</a
 											>
 										</div>
 										<div
 											class="col-sm-6 col-lg-3 order-3 order-sm-2 order-lg-3"
 										>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Doki-Doki Shop & Event</a
 											>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Main Matsuri Magazin</a
 											>
 										</div>
 										<div class="col-sm-6 col-lg-3 order-4">
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Cherry Blossom Day</a
 											>
 										</div>
@@ -374,7 +384,7 @@
 								</div>
 							</li>
 							<li
-								class="nav-item dropdown menu-level-1"
+								class="nav-item dropdown menu-level-1-item"
 								style="position: initial"
 							>
 								<a
@@ -417,17 +427,17 @@
 										<div class="col-sm-6 col-lg-9">
 											<div class="row">
 												<div class="col-lg-4">
-													<a class="dropdown-item menu-level-2" href="#"
+													<a class="dropdown-item menu-level-2-item" href="#"
 														>Gastronomie</a
 													>
 												</div>
 												<div class="col-lg-4">
-													<a class="dropdown-item menu-level-2" href="#"
+													<a class="dropdown-item menu-level-2-item" href="#"
 														>Aussteller & Händler</a
 													>
 												</div>
 												<div class="col-lg-4">
-													<a class="dropdown-item menu-level-2" href="#"
+													<a class="dropdown-item menu-level-2-item" href="#"
 														>Vereine & Institutionen</a
 													>
 												</div>
@@ -436,7 +446,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="nav-item menu-level-1">
+							<li class="nav-item menu-level-1-item">
 								<a
 									class="nav-link active pt-lg-4 pb-lg-4 d-none d-lg-block"
 									aria-current="page"
@@ -451,7 +461,7 @@
 								>
 							</li>
 							<li
-								class="nav-item dropdown menu-level-1"
+								class="nav-item dropdown menu-level-1-item"
 								style="position: initial"
 							>
 								<a
@@ -484,10 +494,12 @@
 								>
 									<div class="row" style="width: 100%">
 										<div class="col-sm-6 col-lg-3">
-											<a class="dropdown-item menu-level-2" href="#">Partner</a>
+											<a class="dropdown-item menu-level-2-item" href="#"
+												>Partner</a
+											>
 										</div>
 										<div class="col-sm-6 col-lg-9">
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Sponsoren</a
 											>
 										</div>
@@ -495,7 +507,7 @@
 								</div>
 							</li>
 							<li
-								class="nav-item dropdown menu-level-1"
+								class="nav-item dropdown menu-level-1-item"
 								style="position: initial"
 							>
 								<a
@@ -528,27 +540,31 @@
 								>
 									<div class="row" style="width: 100%">
 										<div class="col-sm-6 col-lg-3">
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Anfahrt & Parkplätze</a
 											>
-											<a class="dropdown-item menu-level-2" href="#">Presse</a>
+											<a class="dropdown-item menu-level-2-item" href="#"
+												>Presse</a
+											>
 										</div>
 										<div class="col-sm-6 col-lg-3">
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Cosplay Regeln</a
 											>
-											<a class="dropdown-item menu-level-2" href="#"
+											<a class="dropdown-item menu-level-2-item" href="#"
 												>Helfer:in werden</a
 											>
 										</div>
 										<div class="col-sm-6 col-lg-3">
-											<a class="dropdown-item menu-level-2" href="#"> Team</a>
+											<a class="dropdown-item menu-level-2-item" href="#">
+												Team</a
+											>
 										</div>
 										<div class="col-sm-6 col-lg-3"></div>
 									</div>
 								</div>
 							</li>
-							<li class="nav-item menu-level-1">
+							<li class="nav-item menu-level-1-item">
 								<a
 									class="nav-link active pt-lg-4 pb-lg-4 d-none d-lg-block"
 									aria-current="page"

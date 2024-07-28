@@ -7,7 +7,7 @@ li::marker {
 	color: #ff1616;
 }
 
-.menu-level-2 {
+.menu-level-2-item {
 	height: 32px;
 	width: 100%;
 	overflow: hidden;
@@ -16,7 +16,7 @@ li::marker {
 	font-size: 18px;
 }
 
-.menu-level-2 {
+.menu-level-2-item {
 	height: 32px;
 	width: 100%;
 	overflow: hidden;
@@ -25,7 +25,7 @@ li::marker {
 	font-size: 18px;
 }
 
-.menu-level-2:hover {
+.menu-level-2-item:hover {
 	overflow: unset;
 	text-overflow: unset;
 	width: fit-content;
@@ -37,7 +37,7 @@ li::marker {
 	background-color: white;
 }
 
-.menu-level-3 {
+.menu-level-3-item {
 	font-style: italic;
 	height: 32px;
 	overflow: hidden;
@@ -48,7 +48,7 @@ li::marker {
 	cursor: pointer;
 }
 
-.menu-level-3:hover {
+.menu-level-3-item:hover {
 	background-color: #ff1616;
 	color: white;
 	overflow: unset;
@@ -60,7 +60,7 @@ li::marker {
 	z-index: 10;
 }
 
-.menu-level-3:hover a {
+.menu-level-3-item:hover a {
 	width: 100%;
 	height: 100%;
 }
@@ -76,6 +76,11 @@ a {
 
 .navbar {
 	background-color: rgb(168, 168, 168, 0.75);
+	transition: all 1s ease-out;
+}
+
+.navbar-opaque {
+	background-color: rgb(168, 168, 168, 1);
 }
 
 .navbar-toggler-icon {
@@ -88,31 +93,40 @@ a {
 }
 
 @media screen and (pointer: fine) and (min-width: 992px) {
-	.menu-level-1:hover > a {
+	.menu-level-1-item:hover > a {
 		box-sizing: content-box !important;
 		color: #ff1616 !important;
 		background-color: white;
 		outline: 1px solid lightgrey;
 		border-radius: 5px;
+	}
+	.navbar {
+		background-color: rgb(168, 168, 168, 0.75);
 	}
 }
 
 @media screen and (pointer: coarse) and (min-width: 992px) {
-	.menu-level-1:focus-within > a {
+	.menu-level-1-item:focus-within > a {
 		box-sizing: content-box !important;
 		color: #ff1616 !important;
 		background-color: white;
 		outline: 1px solid lightgrey;
 		border-radius: 5px;
 	}
+	.navbar {
+		background-color: rgb(168, 168, 168, 0.75);
+	}
 }
 
 @media screen and (pointer: none) and (min-width: 992px) {
-	.menu-level-1:focus-within > a {
+	.menu-level-1-item:focus-within > a {
 		box-sizing: content-box !important;
 		color: #ff1616 !important;
 		background-color: white;
 		outline: 1px solid lightgrey;
 		border-radius: 5px;
+	}
+	.navbar {
+		background-color: rgb(168, 168, 168, 0.75);
 	}
 }
