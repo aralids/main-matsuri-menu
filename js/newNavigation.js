@@ -1,33 +1,25 @@
 const isTouchDevice =
 	"ontouchstart" in window || navigator.msMaxTouchPoints > 0;
 
-const handleMouseOver = (e) => {
+const handleNavMouseOver = (e) => {
 	if (window.innerWidth >= 992 && !isTouchDevice) {
-		let arr = Object.values(e.target.parentNode.childNodes);
+		const arr = Object.values(e.target.parentNode.childNodes);
 		let div = arr.filter((item) => {
 			return item.nodeName === "DIV";
 		});
-		let a = arr.filter((item) => {
-			return item.nodeName === "A";
-		});
 		div = div[0];
-		a = a[0];
 		div.classList.add("show");
 		div.setAttribute("data-bs-popper", "static");
 	}
 };
 
-const handleMouseOut = (e) => {
+const handleNavMouseOut = (e) => {
 	if (window.innerWidth >= 992 && !isTouchDevice) {
-		let arr = Object.values(e.target.parentNode.childNodes);
+		const arr = Object.values(e.target.parentNode.childNodes);
 		let div = arr.filter((item) => {
 			return item.nodeName === "DIV";
 		});
-		let a = arr.filter((item) => {
-			return item.nodeName === "A";
-		});
 		div = div[0];
-		a = a[0];
 		div.classList.remove("show");
 	}
 };
