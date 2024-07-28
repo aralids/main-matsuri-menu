@@ -42,6 +42,7 @@ input.check-toggle-round-flat:checked ~ .on {
 	margin-left: -9999px;
 	visibility: hidden;
 }
+
 .check-toggle + label {
 	display: block;
 	position: relative;
@@ -64,6 +65,7 @@ input.check-toggle-round-flat + label {
 	-o-border-radius: 60px;
 	border-radius: 60px;
 }
+
 input.check-toggle-round-flat + label:before,
 input.check-toggle-round-flat + label:after {
 	display: block;

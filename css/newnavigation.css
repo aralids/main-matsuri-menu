@@ -105,20 +105,8 @@ a {
 	}
 }
 
-@media screen and (pointer: coarse) and (min-width: 992px) {
-	.menu-level-1-item:focus-within > a {
-		box-sizing: content-box !important;
-		color: #ff1616 !important;
-		background-color: white;
-		outline: 1px solid lightgrey;
-		border-radius: 5px;
-	}
-	.navbar {
-		background-color: rgb(168, 168, 168, 0.75);
-	}
-}
-
-@media screen and (pointer: none) and (min-width: 992px) {
+@media screen and (pointer: coarse) and (min-width: 992px),
+	screen and (pointer: none) and (min-width: 992px) {
 	.menu-level-1-item:focus-within > a {
 		box-sizing: content-box !important;
 		color: #ff1616 !important;
