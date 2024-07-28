@@ -24,6 +24,14 @@ const handleNavMouseOut = (e) => {
 	}
 };
 
+const handleClickOnNonTouchScreen = (e) => {
+	if (!isTouchDevice) {
+		e.preventDefault();
+		console.log(e.target.href);
+		window.location.href = e.target.href;
+	}
+};
+
 const handleHamburgerClick = (e) => {
 	document.getElementById("main-navbar").classList.toggle("navbar-opaque");
 	document.getElementById("sec-navbar").classList.toggle("navbar-opaque");
