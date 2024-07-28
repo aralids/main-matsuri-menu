@@ -1,6 +1,6 @@
 # New Main Matsuri Navigation: How to add
 
-- [ ] 1. Add the files langbutton.css, newnavigation.css, and newNavigation.js to the website's css/js folders.
+- [ ] 1. Add the files [langbutton.css](langbutton.css), newnavigation.css, and newNavigation.js to the website's css/js folders.
 
 - [ ] 2. From copy-paste-this.html, copy the lines 20-22 to the head of the website's html template(s). Change the href/src to where you put the files in step 1.
 
