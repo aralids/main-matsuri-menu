@@ -85,3 +85,23 @@ a {
 .navbar {
 	background-color: rgb(168, 168, 168, 0.75);
 }
+
+@media screen and (min-width: 992px) {
+	.menu-level-1:hover > a {
+		box-sizing: content-box !important;
+		color: red !important;
+		background-color: white;
+		outline: 1px solid lightgrey;
+		border-radius: 5px;
+	}
+}
+
+@media screen and (orientation: landscape) and (min-width: 992px) {
+	.menu-level-1:focus-within > a {
+		box-sizing: content-box !important;
+		color: red !important;
+		background-color: white;
+		outline: 1px solid lightgrey;
+		border-radius: 5px;
+	}
+}

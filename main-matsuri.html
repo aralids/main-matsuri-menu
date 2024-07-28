@@ -17,31 +17,10 @@
 		<title>Bootstrap Example</title>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
-			const handleNonExtentableMouseOver = (e) => {
-				const isTouchDevice =
-					"ontouchstart" in window ||
-					navigator.maxTouchPoints > 0 ||
-					navigator.msMaxTouchPoints > 0;
-				if (window.innerWidth >= 992 && !isTouchDevice) {
-					e.target.classList.add("hovered-level-1-item");
-				}
-			};
-
-			const handleNonExtentableMouseOut = (e) => {
-				const isTouchDevice =
-					"ontouchstart" in window ||
-					navigator.maxTouchPoints > 0 ||
-					navigator.msMaxTouchPoints > 0;
-				if (window.innerWidth >= 992 && !isTouchDevice) {
-					e.target.classList.remove("hovered-level-1-item");
-				}
-			};
+			const isTouchDevice =
+				"ontouchstart" in window || navigator.msMaxTouchPoints > 0;
 
 			const handleMouseOver = (e) => {
-				const isTouchDevice =
-					"ontouchstart" in window ||
-					navigator.maxTouchPoints > 0 ||
-					navigator.msMaxTouchPoints > 0;
 				if (window.innerWidth >= 992 && !isTouchDevice) {
 					let par = e.target.parentNode;
 					let arr = Object.values(e.target.parentNode.childNodes);
@@ -55,16 +34,10 @@
 					a = a[0];
 					div.classList.add("show");
 					div.setAttribute("data-bs-popper", "static");
-					//a.classList.add("show");
-					a.classList.add("hovered-level-1-item");
 				}
 			};
 
 			const handleMouseOut = (e) => {
-				const isTouchDevice =
-					"ontouchstart" in window ||
-					navigator.maxTouchPoints > 0 ||
-					navigator.msMaxTouchPoints > 0;
 				if (window.innerWidth >= 992 && !isTouchDevice) {
 					let par = e.target.parentNode;
 					let arr = Object.values(par.childNodes);
@@ -77,8 +50,6 @@
 					div = div[0];
 					a = a[0];
 					div.classList.remove("show");
-					//a.classList.remove("show");
-					a.classList.remove("hovered-level-1-item");
 				}
 			};
 		</script>
@@ -113,7 +84,7 @@
 					<span class="off">EN</span>
 				</div>
 			</nav>
-			<nav class="navbar navbar-expand-lg p-0 m-0">
+			<nav id="main-navbar" class="navbar navbar-expand-lg p-0 m-0">
 				<div
 					class="container-fluid d-flex ps-5 pe-5 ps-lg-0 pe-lg-0"
 					id="main-navbar-div"
