@@ -1,9 +1,9 @@
-ul {
+.navbar-nav ul {
 	list-style-position: inside;
 	list-style-type: disc;
 }
 
-li::marker {
+.navbar-nav li::marker {
 	color: #ff1616;
 }
 
