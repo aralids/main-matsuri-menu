@@ -76,7 +76,7 @@ a {
 
 .navbar {
 	background-color: rgb(168, 168, 168, 0.75);
-	transition: all 1s ease-out;
+	transition: background-color 1s ease-out;
 }
 
 .navbar-opaque {
